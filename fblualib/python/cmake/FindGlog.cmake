@@ -12,12 +12,12 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8.7 FATAL_ERROR)
 
 INCLUDE(FindPackageHandleStandardArgs)
-CMAKE_PREFIX_PATH='/gpu/homedirs/yz328/.linuxbrew/Cellar/glog/0.3.4_1/'
-GLOG_INCLUDE_DIR='/gpu/homedirs/yz328/.linuxbrew/Cellar/glog/0.3.4_1/include/'
-GLOG_LIBRARY='/gpu/homedirs/yz328/.linuxbrew/Cellar/glog/0.3.4_1/lib/'
+set(CMAKE_PREFIX_PATH /gpu/homedirs/yz328/.linuxbrew/Cellar/glog/0.3.4_1)
+set(GLOG_INCLUDE_DIR /gpu/homedirs/yz328/.linuxbrew/Cellar/glog/0.3.4_1/include)
+set(GLOG_LIBRARY /gpu/homedirs/yz328/.linuxbrew/Cellar/glog/0.3.4_1/lib)
 
 FIND_LIBRARY(GLOG_LIBRARY glog HINTS "${CMAKE_PREFIX_PATH}/lib")
-FIND_PATH(GLOG_INCLUDE_DIR "glog/logging.h" HINTS "${CMAKE_PREFIX_PATH}/glog/logging.h")
+FIND_PATH(GLOG_INCLUDE_DIR "glog/logging.h" HINTS "${CMAKE_PREFIX_PATH}/include/glog/logging.h")
 
 SET(GLOG_LIBRARIES ${GLOG_LIBRARY})
 
