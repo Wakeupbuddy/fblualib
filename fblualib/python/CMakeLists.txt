@@ -28,6 +28,9 @@ FIND_PACKAGE(Glog REQUIRED)
 FIND_PACKAGE(Torch REQUIRED)
 
 SET(CMAKE_PREFIX_PATH ${Torch_INSTALL_PREFIX})
+SET(Boost_INCLUDE_DIRS /gpu/homedirs/yz328/.linuxbrew/Cellar/boost/1.64.0_1/include/boost)
+SET(BOOST_INCLUDEDIR /gpu/homedirs/yz328/.linuxbrew/Cellar/boost/1.64.0_1/include/boost)
+
 FIND_PACKAGE(THPP REQUIRED)
 FIND_PACKAGE(Boost REQUIRED COMPONENTS thread)
 
